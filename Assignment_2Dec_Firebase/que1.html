@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sidebar{
+            width: 250px;
+            height: 90vh;
+            box-shadow: 2px 2px 10px grey;
+        }
+        input{
+            width: 90%;
+            padding: 8px;
+            margin: 5px 2px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        button{
+            padding: 8px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+        #card{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .book{
+            box-shadow: 0 0 10px lightgray;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+ <div id="sidebar">
+     <h3>Add Books</h3>
+      Title:<input type="text" id="title" placeholder="Enter Book Title"/><br /><br />
+            Author:<input type="text" id="author" placeholder="Enter Book Author"/><br /><br />
+      Price:<input type="number" id="price" placeholder="Enter Book Price"/><br /><br />
+      <button onclick="addBook()">Add Book Details</button>
+ </div>
+ <div id="card">
+
+ </div> 
+ <script src="que1.js"></script>  
+</body>
+</html>
