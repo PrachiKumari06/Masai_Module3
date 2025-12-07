@@ -47,14 +47,14 @@ function updateAuthor(id) {
         method: "PATCH",
         body: JSON.stringify({ author: newAuthor })
     })
-    .then(() => getBooks());
+    .then(() => getBook());
 }
 
 function deleteBook(id) {
     fetch("https://masai-studentdata-default-rtdb.asia-southeast1.firebasedatabase.app/" +id + ".json", {
         method: "DELETE"
     })
-    .then(() => getBooks());
+    .then(() => getBook());
 }
 
-getBooks();
+getBook();
