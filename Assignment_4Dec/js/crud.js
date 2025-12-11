@@ -1,4 +1,4 @@
-import { footer,navbar } from "./multifunction.js";
+import { footer,navbar,displayTodo } from "./multifunction.js";
 document.getElementById("navbar").innerHTML = navbar();
 document.getElementById("footer").innerHTML=footer();
 
@@ -10,7 +10,9 @@ document.getElementById("footer").innerHTML=footer();
     document.getElementById("login-btn").addEventListener("click", loginform);
   }
 
-
+if (document.getElementById("todo-btn")) {
+  document.getElementById("todo-btn").addEventListener("click", gettodo);
+}
 
 function signupform(){
  let user={
@@ -42,8 +44,20 @@ function loginform() {
 
   if (email === savedUser.email && password === savedUser.password) {
     alert("Login successful");
-    window.location.href = "todos.html";
+    localStorage.setItem("isLoggedIn", "true");
+    window.location.href = "todo.html";
   } else {
     alert("Invalid credentials");
   }
+}
+function gettodo(){
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    alert("Please login first");
+    window.location.href = "login.html";
+}
+  fetch("https://jsonplaceholder.typicode.com/todos")
+  .then(response=>response.json())
+  .then(data=>{
+    displayTodo(data);
+  })
 }

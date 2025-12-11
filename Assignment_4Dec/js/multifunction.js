@@ -20,3 +20,15 @@ return `<div class="social-icons">
     </div>`   
 
 }
+export function displayTodo(todos){
+    let todoContainer=document.getElementById("todo-container");
+    todoContainer.innerHTML=""; 
+    todos.forEach(item=>{
+todoContainer.innerHTML+=`<div class="todo-item" style="border:1px solid black; margin:6px; padding:2px; border-radius:10px;">
+    <p><strong>Title:</strong> ${item.title}</p>
+    <p><strong>Completed:</strong> ${item.completed?"Yes":"No"}</p>
+</div>`
+
+    })
+
+}
