@@ -1,21 +1,28 @@
 import React, { useState } from 'react'
 
 export default function Student(props) {
-            const [count,setcount]=useState(0);
-
-    function incrementnumber(){
-      
-            setcount(count+1);
-        
+  const [name,setName]=useState("Sakshi");
+    const [age,setAge]=useState(0);
+    const [isStudent,setIsStudent]=useState(true);
+    function changeName(){
+      setName("Masai School");
     }
+    function incrementnumber(){
+    setAge(age+1);
+   }
+   function toggleStudent(){
+    setIsStudent(!isStudent);
+   }
+
+
   return (
     <div className="student-name">
-            <p>Name: {props.name}</p>
-             <p>Name: {props.lastname}</p> 
-             <p>Name: {props.age}</p>
-             <p>IsStudent: {props.isStudent?"Yes":"No"}</p>
-<button onClick={incrementnumber}>Increment</button>
-<p>Count:{count}</p>
+            <p>Name: {name}</p>
+            <button onClick={changeName}>Change Name</button>
+             <p>Age: {age}</p>
+            <button onClick={incrementnumber}>Increment Age</button>
+<p>Is Student: {isStudent ? "Yes" : "No"}</p>
+<button onClick={toggleStudent}>Toggle Student</button>
 
 
     </div>
