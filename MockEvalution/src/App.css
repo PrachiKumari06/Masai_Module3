@@ -1,0 +1,35 @@
+.light{
+    background-color: white;
+    color: black;
+}
+.dark{
+    background-color: black;
+    color: white;
+}
+.theme-btn{
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.card{
+  border-radius: 15px; 
+  padding: 10px;
+  border: 1px solid black;
+  margin-top: 10px; 
+}
+.card.light{
+    background-color: #fff;
+}
+.card.dark{
+    background-color:black;
+    border: 1px solid white;
+    margin: 10px;
+}
+input,textarea{
+    width: 90%;
+    margin-bottom: 6px;
+    padding: 10px;
+}
+button{
+    margin-right: 10px;
+    cursor: pointer;
+}
