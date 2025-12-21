@@ -1,6 +1,6 @@
 import React, {useContext } from 'react'
 import PostCard from './PostCard';
-import {PostContext} from '../context/PostContext'
+import { PostContext } from '../context/Postcontext';
 export default function PostList({theme}) {
     const {posts}=useContext(PostContext);
   return (
