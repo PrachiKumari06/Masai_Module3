@@ -1,0 +1,6 @@
+USEREDUCER :
+1.useReducer : usesatae isi built using useReducer
+.useState is use in when application is small (ui) but in useReducer reduce the using of states again and agian 
+
+2.useContext (use for prop drilling )
+3.23Dec: useMemo:performance optimazation is use like in this 23Dec.jsx when division of 2 it delay by some ms if we use loop of while 
