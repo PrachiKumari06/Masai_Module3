@@ -1,0 +1,11 @@
+framework : inbuilt thing that we are using and libraries are :
+.ShadCN UI : external componenet library(ui component in 2023 it is build) : it is used by installing tailwind first then we can use it so install tailwind then in index.css,vite.config.js
+.go to :https://ui.shadcn.com/docs/installation/vite 
+.then Edit tsconfig/jsconfig.json file(we create manually if not) as we work on js so jsconfig.json (tsconfig is for typescript)
+.npm install -D @types/node in cmd 
+.in vite.config.js :
+.now in cmd:npx shadcn@latest init
+.for each and every component have their installion in command(cmd) so component will create ex:npx shadcn@latest add button in cmd  then it will automatic create a component of button and now we will call in app.jsx 
+.ex2.card : in cmd: npx shadcn@latest add card(create a card componet in Components folder the import it whenever we use it like in app.jsx)
+.ex3: accordion  (the frequently ask question that we genrally used in webpage like what we do and click on it show the answer toggleing type)
+-------------------------------------------------------------------------------------------------------------
